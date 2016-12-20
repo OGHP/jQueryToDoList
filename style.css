@@ -1,0 +1,107 @@
+/*REWRITING JS TO JQUERY*/
+
+/*animation fade in*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadein 0.5s;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: #ebebeb;*/
+}
+
+#todo-form {
+  width: 100%;
+}
+
+/*  #todo-form SPACE input is saying any input element that is a 
+child of the todo form will do...
+can also be written as #todo-form > input  */
+#todo-form input {
+  margin-bottom: 20px;
+}
+
+/* square brackets = specifies that 
+I only want the inputs with attribute "text" */
+#todo-form input[type="text"] {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background-color: #c9c9c9;
+  font-size: 24px;
+}
+
+/* : is a pseudo selector. 
+This code makes the outline go away on the input box*/
+#todo-form input[type="text"]:focus {
+  outline: 0;
+}
+
+
+#todo-form input[type="submit"] {
+  border: none;
+  border-radius: 0px;
+  padding: 10px;
+}
+
+#todo-form input[type="submit"]:hover {
+  background-color: #a7a7a7;
+}
+
+/* ul style - removing the padding and the bullets */
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+#todo-list li {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ebebeb;
+  margin-bottom: 15px;
+}
+
+/* float is for the text to float left */
+#todo-list li p {
+  font-size: 24px;
+  margin-left: 15px;
+  float: left;
+}
+
+/* float is for the delete button to float right*/
+#todo-list li button {
+  display: block;
+  border: none;
+  border-radius: 0px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: red;
+  color: white;
+  float: right;
+  margin-right: 10px;
+}
+
+/* removes outline on delete button */
+#todo-list li button:focus {
+  outline: 0;
+}
+
+#todo-list li button:hover {
+  background-color: #cc2211;
+}
+
+.clearfix {
+  clear: both;
+}
